@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niloufar Ashayeri - Personal Webpage</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .sidebar {
+            width: 300px;
+            background: #333;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .sidebar img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 3px solid #fff;
+        }
+        .sidebar h1 {
+            font-size: 26px;
+            margin: 10px 0;
+        }
+        .sidebar p {
+            font-size: 16px;
+            color: #ccc;
+            margin: 10px 0;
+        }
+        .sidebar .social-icons {
+            margin-top: 20px;
+        }
+        .sidebar .social-icons a {
+            margin: 0 10px;
+            color: #ccc;
+            text-decoration: none;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+        .sidebar .social-icons a:hover {
+            color: #1e90ff;
+        }
+        .content {
+            flex: 1;
+            background: #444;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            overflow-y: auto;
+            position: relative;
+        }
+        .content .section {
+            background: #555;
+            padding: 20px;
+            border-radius: 10px;
+            transition: background 0.3s ease;
+            cursor: pointer;
+        }
+        .content .section:hover {
+            background: #666;
+        }
+        .content .section h2 {
+            margin: 0;
+            font-size: 22px;
+        }
+        .content .section-content {
+            display: block;
+            margin-top: 10px;
+            overflow: hidden;
+            transition: max-height 0.5s ease, opacity 0.5s ease;
+            max-height: 0;
+            opacity: 0;
+        }
+        .content .section.active .section-content {
+            max-height: 500px; /* Adjust as necessary */
+            opacity: 1;
+        }
+        .project {
+            margin-top: 10px;
+        }
+        .project h3 {
+            margin: 5px 0;
+        }
+        .project p {
+            margin: 5px 0;
+            color: #ccc;
+        }
+        .project a {
+            color: #1e90ff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .project a:hover {
+            color: #fff;
+        }
+        .sketch {
+            font-family: monospace;
+            margin-top: 20px;
+            white-space: pre;
+            line-height: 1.2;
+            font-size: 12px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <img src="profile.jpeg" alt="Profile Picture">
+            <h1>Niloufar Ashayeri</h1>
+            <p>City Name, ST</p>
+            <p>Sample bio and introduction text goes here. This can be changed later.</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com">LinkedIn</a>
+                <a href="https://github.com">GitHub</a>
+                <a href="mailto:example@gmail.com">Gmail</a>
+            </div>
+            <div class="sketch" id="sketch">
+
+            </div>
+        </div>
+        <div class="content">
+            <div class="section" onclick="toggleSection('about-me', 'sketchAboutMe')">
+                <h2>About Me</h2>
+                <div id="about-me" class="section-content">
+                    <p>Detailed information about me.</p>
+                </div>
+            </div>
+            <div class="section" onclick="toggleSection('experiences', 'sketchExperiences')">
+                <h2>Experiences</h2>
+                <div id="experiences" class="section-content">
+                    <p>Job Title (2019 - Present): Company Name</p>
+                    <ul>
+                        <li>Printed from desktop. Sent emails.</li>
+                        <li>Called people using the telephone.</li>
+                        <li>Drank water from office cooler.</li>
+                        <li>Ate donuts on people's birthdays.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section" onclick="toggleSection('education', 'sketchEducation')">
+                <h2>Education</h2>
+                <div id="education" class="section-content">
+                    <p>Education details go here.</p>
+                </div>
+            </div>
+            <div class="section" onclick="toggleSection('publications', 'sketchPublications')">
+                <h2>Publications</h2>
+                <div id="publications" class="section-content">
+                    <p>Publications details go here.</p>
+                </div>
+            </div>
+            <div class="section" onclick="toggleSection('projects', 'sketchProjects')">
+                <h2>Projects</h2>
+                <div id="projects" class="section-content">
+                    <div class="project">
+                        <h3>Sample Project 1</h3>
+                        <p>Short description of Sample Project 1. <a href="project1.html">Read more</a></p>
+                    </div>
+                    <div class="project">
+                        <h3>Sample Project 2</h3>
+                        <p>Short description of Sample Project 2. <a href="project2.html">Read more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="section" onclick="toggleSection('skills', 'sketchSkills')">
+                <h2>Skills</h2>
+                <div id="skills" class="section-content">
+                    <p>Skills details go here.</p>
+                </div>
+            </div>
+            <div class="section" onclick="toggleSection('hobbies', 'sketchHobbies')">
+                <h2>Hobbies</h2>
+                <div id="hobbies" class="section-content">
+                    <p>Hobbies details go here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const sketches = {
+            default: `
+            `,
+            sketchAboutMe: `
+ O
+/|\\
+/ \\
+
+
+            `,
+            sketchExperiences: `
+ O
+\\|/
+|
+/ \\
+___________________
+| _______________ |
+| |XXXXXXXXXXXXX| |
+| |XXXXXXXXXXXXX| |
+| |XXXXXXXXXXXXX| |
+| |XXXXXXXXXXXXX| |
+| |XXXXXXXXXXXXX| |
+|_________________|
+    _[_______]_
+___[___________]___
+|         [_____] []|__
+   |         [_____] []|  \\__
+    L___________________J     \\
+      ___________________      /\\
+      /###################\\    (__)
+            `,
+            sketchEducation: `
+___
+|_|
+ O
+ \\|_
+ |
+ / \\
+    __...--~~~~~-._   _.-~~~~~--...__
+   //               \\V/               \\
+   //                 |                 \\
+   //__...--~~~~~~-._  |  _.-~~~~~~--...__\\
+   //__.....----~~~~._\\ | /_.~~~~----.....__\\
+  ====================\\|/===================
+    '---'
+            `,
+            sketchPublications: `
+
+/'\\    __________
+( ' )  ()_________)
+  \\'/    \\ ~~~~~~~~ \\
+    \\      \\ ~~~~~~   \\
+     ==      \\__________\\
+     (__)    ()__________)
+
+           O
+          /|\\
+          / \\
+            `,
+            sketchProjects: `
+
+__/\\__
+\\    /
+__/\\__/    \\__/\\__
+\\                /
+/_      O       _\\
+ \\   /|\\     /
+__/    /\\     \\__
+\\                /
+/_  __      __  _\\
+\\/  \\    /  \\/
+/_  _\\
+\\/
+ O
+<|>
+ / \\
+            `,
+            sketchSkills: `
+/\\ /\\
+((ovo))
+():::()
+\V\V\V
+            `,
+            sketchHobbies: `
+  ___
+o  | |
+|^=| |
+I\\,J-|
+            `,
+        };
+
+        function toggleSection(id, sketchKey) {
+            var section = document.getElementById(id).parentElement;
+            var sketchElement = document.getElementById('sketch');
+            if (section.classList.contains('active')) {
+                section.querySelector('.section-content').style.maxHeight = '0';
+                section.querySelector('.section-content').style.opacity = '0';
+                setTimeout(function() {
+                    section.classList.remove('active');
+                    sketchElement.innerText = sketches.default;
+                }, 500); // Match the transition duration
+            } else {
+                var activeSections = document.querySelectorAll('.content .section.active');
+                activeSections.forEach(function (activeSection) {
+                    activeSection.querySelector('.section-content').style.maxHeight = '0';
+                    activeSection.querySelector('.section-content').style.opacity = '0';
+                    setTimeout(function() {
+                        activeSection.classList.remove('active');
+                    }, 500); // Match the transition duration
+                });
+                section.classList.add('active');
+                section.querySelector('.section-content').style.maxHeight = section.querySelector('.section-content').scrollHeight + 'px';
+                section.querySelector('.section-content').style.opacity = '1';
+                sketchElement.innerText = sketches[sketchKey];
+            }
+        }
+    </script>
+</body>
+</html>
