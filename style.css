@@ -119,3 +119,22 @@ body {
     font-size: 12px;
     color: #ccc;
 }
+
+.nav-links {
+    margin-top: 20px;
+}
+
+.portfolio-btn {
+    display: inline-block;
+    background-color: #1e90ff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.portfolio-btn:hover {
+    background-color: #0073e6;
+}
