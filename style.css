@@ -23,6 +23,7 @@ body {
 /* Sidebar Styling */
 .sidebar {
     width: 300px;
+    min-width: 220px;
     background: rgba(51, 51, 51, 0); /* Fully transparent */
     border: 2px solid rgba(255, 255, 255, 0.3); /* Light outline */
     padding: 20px;
@@ -31,6 +32,40 @@ body {
     flex-direction: column;
     align-items: center;
 }
+.sidebar {
+    width: 300px;
+    min-width: 220px;
+}
+
+/* Mobile: Make Sidebar More Compact */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        min-width: auto;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .sidebar img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .sidebar h1 {
+        font-size: 20px;
+    }
+
+    .sidebar p {
+        font-size: 14px;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
 
 .sidebar img {
     width: 120px;
@@ -70,15 +105,33 @@ body {
 /* Main Content Area */
 .content {
     flex: 1;
-    background: rgba(68, 68, 68, 0); /* Fully transparent */
+    background: rgba(68, 68, 68, 0);
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    overflow-y: auto; /* Enables scrolling */
-    max-height: 90vh; /* Prevents excessive height */
+    overflow-y: auto;
+    max-height: 90vh;
     position: relative;
 }
+
+/* Mobile: Adjust Sections to Fit Screen */
+@media screen and (max-width: 768px) {
+    .content {
+        padding: 10px;
+        max-height: none;
+    }
+
+    .section {
+        padding: 10px;
+        border-width: 1px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
+
 
 /* Section Styling */
 .content .section {
@@ -89,6 +142,10 @@ body {
     margin-bottom: 10px;
     cursor: pointer;
     transition: border 0.3s;
+    cursor: pointer;
+    user-select: none; /* Prevents accidental text selection */
+    touch-action: manipulation; /* Improves tap response */
+
 }
 
 .content .section:hover {
