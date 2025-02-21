@@ -8,71 +8,181 @@
 </head>
 <body>
     <div class="container">
-        <div class="sidebar">
-            <img src="profile.jpeg" alt="Profile Picture">
-            <h1>Niloufar Ashayeri</h1>
-            <p>Master's Student in Computer Science | Computer Graphics & Simulations</p>
-            <a href="index.html" class="portfolio-btn">⬅ Back to Home</a>
-        </div>
-        <div class="content">
-            <div class="section">
-                <h2>About Me</h2>
-                <p>Passionate about the fusion of computer science, graphics, and creativity. Specializing in research, simulation, rendering, and graphical tool development.</p>
-            </div>
+      <div class="content">
 
-            <div class="section">
-                <h2>Research</h2>
-                <p>Fascinated by the way nature’s patterns emerge from mathematical principles, I am currently researching geometric modeling of phyllotaxis patterns using computer graphics techniques.</p>
-            </div>
 
-            <div class="section">
-                <h2>Modeling & Tools</h2>
-                <p>This surface editor enables precise local control and real-time manipulation. Features:</p>
+          <!-- <div class="section" onclick="toggleSection('research', 'sketchResearch')"> -->
+            <h2>Research</h2>
+            <!-- <div id="research" class="section-content"> -->
+                <p>Fascinated by the way nature’s patterns emerge from mathematical principles, I am currently writing my thesis on geometric modeling of phyllotaxis patterns using computer graphics techniques. My work explores how computational methods can simulate and visualize the growth and arrangement of plant structures, revealing the underlying mathematical beauty of nature.</p>
+                <img src="images/about.png" alt="Description" class="media">
+                <img src="images/research1.png" alt="Description" class="media">
+                <img src="images/research2.png" alt="Description" class="media">
+
+            <!-- </div> -->
+          <!-- </div> -->
+
+          <!-- <div class="section" onclick="toggleSection('modelling-tools', 'sketchModelling')"> -->
+            <h2>Modelling and Tools</h2>
+            <!-- <div id="modelling-tools" class="section-content"> -->
+              <h3> Surface generator <h3>
+                <p>This table showcases the capabilities of the tools I developed as part of a surface editor, designed for precise local control and real-time surface manipulation.</p>
                 <ul>
-                    <li>Vertical & horizontal control point adjustments</li>
-                    <li>Multi-point editing for large-scale modifications</li>
-                    <li>Arbitrary surface creation with topology matching</li>
-                    <li>New control point addition for pattern sketching</li>
+                    <li>Adjusting control points vertically and horizontally for fine-tuned shaping.</li>
+                    <li>Modify multiple points simultaneously for efficient large-scale edits.</li>
+                    <li>Create folded, curved, or freeform surfaces that match the topology of a plane.</li>
+                    <li>Add new control points to sketch patterns directly on the surface, enhancing customization and flexibility.</li>
                 </ul>
-                <p>📷 (Image or video from Slide X)</p>
-            </div>
+                <img src="images/modelling1.png" alt="Description" class="media">
+            <!-- </div> -->
+          <!-- </div> -->
 
-            <div class="section">
-                <h2>Simulations</h2>
-                <p>Realistic physics-based motion & simulations:</p>
+          <!-- <div class="section" onclick="toggleSection('b-spline', 'sketchBSpline')"> -->
+            <h3>B-Spline Curve Generator</h3>
+            <!-- <div id="b-spline" class="section-content"> -->
+                <p>For this project, I implemented a B-Spline curve generator with an interactive UI using ImGui. Users can manipulate control points, adjust the curve's order (k), and visualize the generated curve dynamically.</p>
+                <p>Additionally, I extended the functionality by incorporating a Surface of Revolution, allowing 2D curves to be rotated around an axis to form 3D surfaces.</p>
+                <video controls class="media">
+                  <source src="videos/bsplines.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+
+            <!-- </div> -->
+          <!-- </div> -->
+
+          <!-- <div class="section" onclick="toggleSection('parametric-pattern', 'sketchParametric')"> -->
+            <h3>Parametric Pattern Generation</h3>
+            <!-- <div id="parametric-pattern" class="section-content"> -->
+                <p>This project simulates a point tracing a path as it rotates inside a larger circle, creating intricate geometric patterns based on parametric equations.</p>
+                <p>By adjusting circle radii, speed, and tracing duration, different patterns emerge, demonstrating mathematical symmetry and dynamic motion.</p>
+                <video controls class="media">
+                  <source src="videos/circincirc.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+
+            <!-- </div> -->
+          <!-- </div> -->
+
+          <!-- <div class="section" onclick="toggleSection('roller-coaster', 'sketchRollerCoaster')"> -->
+          <h2> Simulations </h2>
+            <h3>Roller Coaster Simulation</h3>
+            <!-- <div id="roller-coaster" class="section-content"> -->
+                <p>This project simulates a realistic roller coaster using physics-based motion and banking mechanics.</p>
                 <ul>
-                    <li>🎢 Roller Coaster: Physics-driven motion & banking system</li>
-                    <li>🐦 BOIDs: Flocking behavior using Reynolds' algorithm</li>
-                    <li>🪶 Cloth Simulation: Wind dynamics for flag-like motion</li>
-                    <li>🧊 Jelly Cube: Soft-body elasticity & deformation</li>
+                    <li><b>Physics-Driven Motion</b> – Velocity, acceleration, and gravity influence the ride’s speed dynamically.</li>
+                    <li><b>Banking System</b> – The coaster tilts naturally into turns, mimicking real-world track banking.</li>
+                    <li><b>Rider's View </b>– First-person experience following the track.</li>
                 </ul>
-                <p>📷 (Images or videos from Slide X)</p>
-            </div>
+                <video controls class="media">
+                    <source src="videos/roller1.mov" type="video/mp4">
+                      Your browser does not support the video tag.
+                </video>
+                <video controls class="media">
+                    <source src="videos/roller2.mov" type="video/mp4">
+                      Your browser does not support the video tag.
+                </video>
 
-            <div class="section">
-                <h2>Animations</h2>
-                <p>Smoke & Water Simulations: Realistic physics-based rendering with block shaders.</p>
-                <p>Magic Paper Animation: Storytelling through keyframe animation in Blender.</p>
-                <p>📷 (Images or videos from Slide X)</p>
-            </div>
+            <!-- </div> -->
+          <!-- </div> -->
 
-            <div class="section">
-                <h2>Rendering</h2>
-                <p>Physically-Based Rendering (PBR) of flowers using spectral data instead of traditional RGB-based color selection. Factors considered:</p>
+          <!-- <div class="section" onclick="toggleSection('boids', 'sketchBoids')"> -->
+            <h3>BOIDs Flocking Behavior</h3>
+            <!-- <div id="boids" class="section-content"> -->
+                <p>This simulation models flocking behavior using Craig Reynolds’ BOIDs algorithm, where agents (birds) follow three key rules:</p>
                 <ul>
-                    <li>Wavelength-specific light interactions</li>
-                    <li>Sketch-based spectral input</li>
-                    <li>Surface thickness variations & absorption</li>
-                </ul>
-                <p>📷 (Images or videos from Slide X)</p>
-            </div>
+                    <li><b>Separation</b> – Avoid crowding neighbors.</li>
+                    <li><b>Alignment</b> – Match velocity with nearby BOIDs.</li>
+                    <li><b>Cohesion</b> – Steer toward the group's center.</li>
 
-            <div class="section">
-                <h2>Contact</h2>
+
+                </ul>
+                <video controls class="media">
+                    <source src="videos/boids.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                </video>
+
+
+            <!-- </div> -->
+          <!-- </div> -->
+<!--  -->
+          <!-- <div class="section" onclick="toggleSection('cloth-simulation', 'sketchCloth')"> -->
+            <h3>Cloth Simulation</h3>
+            <!-- <div id="cloth-simulation" class="section-content"> -->
+                <p>Simulates aerodynamic forces for natural fluttering motion.</p>
+                <video controls class="media">
+                    <source src="videos/flag.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                </video>
+            <!-- </div> -->
+          <!-- </div> -->
+
+          <!-- <div class="section" onclick="toggleSection('jelly-cube', 'sketchJellyCube')"> -->
+            <h3>Jelly Cube Simulation</h3>
+            <!-- <div id="jelly-cube" class="section-content"> -->
+                <p>Soft-body physics showcasing elasticity, deformation, and bounce.</p>
+                <video controls class="media">
+                    <source src="videos/jelly cube.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+            <!-- </div> -->
+          <!-- </div> -->
+
+          <!-- <div class="section" onclick="toggleSection('animations', 'sketchAnimations')"> -->
+            <h2>Animations</h2>
+            <!-- <div id="animations" class="section-content"> -->
+              <h3> blender </h3>
+                <p>The following two videos showcase my ability to create realistic smoke and water simulations using Blender.</p>
+                <video controls class="media">
+                    <source src="videos/blender1.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <video controls class="media">
+                        <source src="videos/blender2.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+            <!-- </div> -->
+          <!-- </div> -->
+
+          <!-- <div class="section" onclick="toggleSection('magic-paper', 'sketchMagicPaper')"> -->
+            <h2>Rigging</h2>
+            <!-- <div id="magic-paper" class="section-content"> -->
+                <p>This animation was created as part of a course project, where the goal was to bring an inanimate object to life through movement and storytelling. I chose a piece of paper as my subject and crafted a short narrative where it discovers ‘magic water’ and gains the ability to fly to the moon.
+                  The entire process—including modeling, rigging, and animating—was completed in Blender. The animation incorporates key principles of motion, such as squash and stretch (used to enhance the sense of weight and bounce). While there’s room for refinement in camera movement and animation smoothing, the project successfully demonstrates my ability to keyframe dynamic motion, apply expressive deformations, and convey personality through animation.
+                  </p>
+                <video controls class="media">
+                    <source src="videos/rigging.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+            <!-- </div> -->
+          <!-- </div> -->
+
+          <!-- <div class="section" onclick="toggleSection('flower-rendering', 'sketchFlowerRendering')"> -->
+            <h2>Flower Coloration Rendering</h2>
+            <!-- <div id="flower-rendering" class="section-content"> -->
+
+                <h3>🌿 Key Features:</h3>
+                <ul>
+                    <li><b>🎨 Spectral Rendering:</b> Colors are computed based on wavelength-specific light interactions rather than static RGB values.</li>
+                    <li><b>✏️ Sketch-Based Input:</b> Users can sketch spectral curves to control how light interacts with petals, influencing their final color.</li>
+                    <li><b>📏 Surface Thickness Impact:</b> The system accounts for thickness variations in petals, affecting light scattering and absorption.</li>
+                </ul>
+                <img src="images/rendering.png" alt="Description" class="media">
+
+            <!-- </div> -->
+          <!-- </div> -->
+
+          <!-- <div class="section" onclick="toggleSection('contact', 'sketchContact')"> -->
+            <h2>Let's work together!</h2>
+            <!-- <div id="contact" class="section-content"> -->
+            <img src="images/me.jpg" alt="Description" class="media">
+
                 <p>📧 Email: niloufar711@gmail.com</p>
                 <p>🔗 <a href="https://linkedin.com/in/niloufar-ashayeri">LinkedIn</a></p>
-            </div>
-        </div>
+            <!-- </div> -->
+          <!-- </div> -->
+
+      </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
