@@ -35,18 +35,18 @@ body {
 }
 
 
-/* Mobile: Convert Sidebar to a Box at the Top */
 @media screen and (max-width: 768px) {
     .sidebar {
-        position: relative; /* No longer a sidebar */
+        position: relative;
         width: 100%;
         height: auto;
-        max-height: none;
         padding: 15px;
         text-align: center;
-        background: black; /* Keep background */
-        overflow: visible;
+        background: black;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds slight shadow for better separation */
+        border-bottom: 2px solid rgba(255, 255, 255, 0.3);
     }
+
 
     .sidebar img {
         width: 80px;
