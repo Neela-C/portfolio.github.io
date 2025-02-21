@@ -9,6 +9,9 @@ body {
     align-items: center;
     height: 100vh;
     overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto; /* Allows vertical scrolling */
+
 }
 
 .container {
@@ -113,8 +116,9 @@ body {
     flex-direction: column;
     gap: 20px;
     overflow-y: auto;
-    max-height: 90vh;
     position: relative;
+    max-height: none;
+
 }
 /* Mobile: Make Content Flow Below Sidebar */
 @media screen and (max-width: 768px) {
