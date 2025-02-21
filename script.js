@@ -131,7 +131,3 @@ function toggleSection(id, sketchKey) {
         sketchElement.innerText = sketches[sketchKey];
     }
 }
-
-function toggleSidebar() {
-    document.querySelector(".sidebar").classList.toggle("active");
-}
