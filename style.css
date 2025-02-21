@@ -9,9 +9,6 @@ body {
     align-items: center;
     height: 100vh;
     overflow: hidden;
-    overflow-x: hidden;
-    overflow-y: auto; /* Allows vertical scrolling */
-
 }
 
 .container {
@@ -34,41 +31,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-y: auto;
-}
-
-
-@media screen and (max-width: 768px) {
-    .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-        padding: 15px;
-        text-align: center;
-        background: black;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds slight shadow for better separation */
-        border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-    }
-
-
-    .sidebar img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .sidebar h1 {
-        font-size: 22px;
-    }
-
-    .sidebar p {
-        font-size: 14px;
-        color: #ccc;
-    }
-
-    .content {
-        margin-left: 0;
-        padding-top: 10px;
-    }
 }
 
 
@@ -110,23 +72,15 @@ body {
 /* Main Content Area */
 .content {
     flex: 1;
-    background: rgba(68, 68, 68, 0);
+    background: rgba(68, 68, 68, 0); /* Fully transparent */
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    overflow-y: auto;
+    overflow-y: auto; /* Enables scrolling */
+    max-height: 90vh; /* Prevents excessive height */
     position: relative;
-    max-height: none;
-
 }
-/* Mobile: Make Content Flow Below Sidebar */
-@media screen and (max-width: 768px) {
-    .content {
-        margin-top: 10px;
-    }
-}
-
 
 /* Section Styling */
 .content .section {
@@ -137,10 +91,6 @@ body {
     margin-bottom: 10px;
     cursor: pointer;
     transition: border 0.3s;
-    cursor: pointer;
-    user-select: none; /* Prevents accidental text selection */
-    touch-action: manipulation; /* Improves tap response */
-
 }
 
 .content .section:hover {
